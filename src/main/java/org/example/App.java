@@ -21,9 +21,12 @@ public class App
         try {
             session.beginTransaction();
 
-            Person person = session.get(Person.class, 1);
-            System.out.println(person.getName());
-            System.out.println(person.getAge());
+           Person person1 = new Person("Samir", 1);
+           Person person2 = new Person("Naima", 26);
+           Person person3 = new Person("Ulugbek", 24);
+           session.save(person1);
+           session.save(person2);
+           session.save(person3);
 
             session.getTransaction().commit();
 
