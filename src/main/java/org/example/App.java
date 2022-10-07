@@ -20,13 +20,19 @@ public class App
 
         try {
             session.beginTransaction();
+// Updating entity in table
+//            Person person = session.get(Person.class, 1);
+//            person.setAge(28);
 
-           Person person1 = new Person("Samir", 1);
-           Person person2 = new Person("Naima", 26);
-           Person person3 = new Person("Ulugbek", 24);
-           session.save(person1);
-           session.save(person2);
-           session.save(person3);
+
+            // Saving Entity to the table
+//            Person begona = new Person("Begona", 55);
+//            session.save(begona);
+            
+            // Deleting entity from the table
+
+            Person person = session.get(Person.class, 5);
+            session.delete(person);
 
             session.getTransaction().commit();
 
